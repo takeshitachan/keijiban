@@ -1,0 +1,22 @@
+body {
+    font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN',
+    'YuGothic', '游ゴシック', 'メイリオ', Meiryo, -apple-system,
+    BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+}
+
+.post-list {
+    border-top: 1px solid black;
+    margin: 40px auto;
+    max-width: 975px;
+}
+
+.post {
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.label {
+    vertical-align: top;
+    margin-right: 5px;
+}
