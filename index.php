@@ -36,6 +36,7 @@ fclose($fp);
     </ul>
 <?php else: ?>
         <p>まだ投稿はありません</p>
+<?php endif; ?>
     </section>
 </body>
 </html>
