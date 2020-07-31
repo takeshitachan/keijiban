@@ -14,15 +14,15 @@ fclose($fp);
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="stylesheet.css">
-    <title>掲示板</title>
+    <title>くぼっちの掲示板</title>
 </head>
 <body>
     <h1>くぼっちの掲示板</h1>
     <section class="new-post">
         <h2>新規投稿</h2>
         <form action="" method="post">
-            <div class="name"><span class="label">お名前:</span><input type="text" name="name" value=""></div>
-            <div class="post"><span class="label">本文:</span><textarea name="comment" cols="30" rows="3" maxlength="80" wrap="hard" placeholder="80字以内で入力してください。"></textarea></div>
+            <div class="name"><span class="label">名前: </span><input type="text" name="name" value="" maxlength="20"></div>
+            <div class="post"><span class="label">本文: </span><textarea name="text" value="" maxlength="300" cols="50" rows="5" wrap="hard" placeholder="300字以内で入力してください"></textarea></div>
             <input type="submit" value="投稿">
         </form>
     </section>
