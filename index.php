@@ -22,7 +22,7 @@ fclose($fp);
         <h2>新規投稿</h2>
         <form action="" method="post">
             <div class="name"><span class="label">名前: </span><input type="text" name="name" value="" maxlength="20"></div>
-            <div class="post"><span class="label">本文: </span><textarea name="text" value="" maxlength="300" cols="50" rows="5" wrap="hard" placeholder="300字以内で入力してください"></textarea></div>
+            <div class="post"><span class="label">本文: </span><textarea name="comment" value="" maxlength="300" cols="50" rows="5" wrap="hard" placeholder="300字以内で入力してください"></textarea></div>
             <input type="submit" value="投稿">
         </form>
     </section>
