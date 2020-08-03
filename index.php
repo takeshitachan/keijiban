@@ -5,7 +5,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     rewind($fp);
 }
 while ($row = fgetcsv($fp)) {
-    $rows[] = $row;
+    if(!empty($row)) {
+        $rows[] = $row;
+    }
 }
 fclose($fp);
 ?>
@@ -23,7 +25,7 @@ fclose($fp);
         <form action="" method="post">
             <div class="name"><span class="label">名前: </span><input type="text" name="name" value="" maxlength="20"></div>
             <div class="post"><span class="label">本文: </span><textarea name="comment" value="" maxlength="300" cols="50" rows="5" wrap="hard" placeholder="300字以内で入力してください"></textarea></div>
-            <input class="toukou" type="submit" value="投稿">
+            <input class="post-button" type="submit" value="投稿">
         </form>
     </section>
     <section class="post-list">
