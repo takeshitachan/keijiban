@@ -32,10 +32,10 @@ fclose($fp);
     <ul>
 <?php foreach ($rows as $row): ?>
     <?php if (!empty($row[0])): ?>
-        <div><p><?=$row[0]?>さん [<?=date("Y/m/d H:i:s");?>]</p>
+        <p><?=$row[0]?>さん [<?=date("Y/m/d H:i:s");?>]</p>
     <?php endif; ?>
     <?php if (!empty($row[1])): ?>
-        <h3><?=$row[1]?></h3><hr></div>
+        <h3><?=$row[1]?></h3><hr>
     <?php endif; ?>
 <?php endforeach; ?>
     </ul>
