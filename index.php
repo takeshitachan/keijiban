@@ -5,9 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     rewind($fp);
 }
 while ($row = fgetcsv($fp)) {
-    if(!empty($row)) {
-        $rows[] = $row;
-    }
+    $rows[] = $row;
 }
 fclose($fp);
 ?>
@@ -33,7 +31,10 @@ fclose($fp);
  <?php if (!empty($rows)): ?>
     <ul>
 <?php foreach ($rows as $row): ?>
-        <div><p><?=$row[0]?>さん [<?=date("Y/m/d H:i:s");?>]</p><h3><?=$row[1]?></h3><hr></div>
+        <div><p><?=$row[0]?>さん [<?=date("Y/m/d H:i:s");?>]</p>
+    <?php if (!empty($row)): ?>
+        <h3><?=$row[1]?></h3><hr></div>
+    <?php endif; ?>
 <?php endforeach; ?>
     </ul>
 <?php else: ?>
