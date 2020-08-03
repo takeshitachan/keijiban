@@ -30,17 +30,14 @@ fclose($fp);
         <h2>投稿一覧</h2>
  <?php if (!empty($rows)): ?>
     <ul>
-    <?php if($_SERVER["REQUEST_METHOD"] === "POST")?>
-        <?php foreach ($rows as $row): ?>
-            <?php if (!empty($row[0])): ?>
-                <p><?=$row[0]?>さん [<?=date("Y/m/d H:i:s");?>]</p>
-            <?php endif; ?>
-            <?php if (!empty($row[1])): ?>
-                <h3><?=$row[1]?></h3><hr>
-            <?php endif; ?>
-        <?php endforeach; ?>
-        <?php header("Location:https://kubochinokeijiban.herokuapp.com/") ?>
+ <?php foreach ($rows as $row): ?>
+    <?php if (!empty($row[0])): ?>
+        <p><?=$row[0]?>さん [<?=date("Y/m/d H:i:s");?>]</p>
     <?php endif; ?>
+    <?php if (!empty($row[1])): ?>
+        <h3><?=$row[1]?></h3><hr>
+    <?php endif; ?>
+<?php endforeach; ?>       
     </ul>
 <?php else: ?>
         <p>まだ投稿はありません</p>
